@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ChatBox"
+             x:Class="ChatBox.View.LoginPage">
+    <StackLayout VerticalOptions="Center"
+                 CompressedLayout.IsHeadless="True"
+                 Margin="20,0">
+        <Entry x:Name="usernameEntry"
+               Placeholder="Username"
+               Text="{Binding Username, Mode=TwoWay}"/>
+        <Entry x:Name="passwordEntry"
+               Placeholder="Password"
+               Text="{Binding LoginCommand,Mode=TwoWay}"
+               IsPassword="True"/>
+        <Button x:Name="loginButton"
+                Margin="0,50,0,0"
+                Text="Login"
+                Command="{Binding LoginCommand}"
+                CommandParameter="{Binding User}"/>
+    </StackLayout>
+</ContentPage>
